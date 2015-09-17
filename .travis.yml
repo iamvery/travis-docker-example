@@ -1,8 +1,9 @@
 sudo: required
-language: ruby
 services:
   - docker
 
 before_install:
   - docker build --tag example .
+
+script:
   - docker run example
